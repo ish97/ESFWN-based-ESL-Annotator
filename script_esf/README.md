@@ -41,7 +41,7 @@
 
 
 ## How To Use
-###### 1. Change 'ewiser_path' and 'ewiser_input' path to [your path] in the 'generate_event_structure_lexicon.py'
-###### 2. **Usage**: python generate_event_structure_lexicon.py "your sentence"
-###### 3. **Check the output**: 'esl_annotation.result.json'
+#### 1. Change 'ewiser_path' and 'ewiser_input' path to [your path] in the 'generate_event_structure_lexicon.py'
+#### 2. **Usage**: python generate_event_structure_lexicon.py "your sentence"
+#### 3. **Check the output**: 'esl_annotation.result.json'
 
