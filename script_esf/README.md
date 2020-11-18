@@ -1,5 +1,5 @@
 # ESFWN-based ESL Annotator
-**Event Structure Frame-annotated WordNet (ESFWN)** is a knowledge base which includes the offset and the synset number of WordNet and the proper Event Structure Frame (ESF) for all verbs in English. ESFWN makes it possible to use  the information WordNet provides and the ESF for verbs in English text. Its filename is **esfwn_v1.json**.       
+**Event Structure Frame-annotated WordNet (ESFWN)** is a knowledge base which includes the offset and the synset number of WordNet and the proper Event Structure Frames (ESF) for all verbs in English. The ESFWN makes it possible to use the information WordNet provides and the ESF for verbs in English text. Its filename is **esfwn_v1.json**.       
 **ESFWN-based ESL Annotator** annotates the Event Structure Lexicon (ESL) for each verb in English text. The ESL includes verb itself, verb lemma, the WordNet offset and synset number for linking to WordNet, synonyms and hypernyms, the ESF type and its corresponding ESF.
 
 
@@ -31,7 +31,7 @@
 #### 3. install NLTK (Natural Language ToolKit) and NLTK Dataset
       - pip install nltk
       - install NLTK Dataset
-       ```
+       ```python
         >>>import nltk
         >>>nltk.download()
        ```
