@@ -22,16 +22,16 @@
 ## Pre-requisite and Installation
 
 #### 1. EWISER(https://github.com/SapienzaNLP/ewiser)
-      ## - Follow the installation guideline the EWISER provides. 
-      ## - **External Downloads**: 
-          You should download [SemCor + tagged glosses + WordNet Examples](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view?usp=sharing) and unzip and put it into the ewiser folder.
+      - Follow the installation guideline the EWISER provides. 
+      - **External Downloads**: 
+        You should download [SemCor + tagged glosses + WordNet Examples](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view?usp=sharing) and unzip and put it into the ewiser folder.
 
 #### 2. AllenNLP SRL(https://demo.allennlp.org/semantic-role-labeling)
-      ## pip install allennlp==1.0.0 allennlp-models==1.0.0
+      pip install allennlp==1.0.0 allennlp-models==1.0.0
 
 #### 3. install NLTK (Natural Language ToolKit) and NLTK Dataset
-      ## - pip install nltk
-      ## - install NLTK Dataset
+      - pip install nltk
+      - install NLTK Dataset
        ```python
         >>>import nltk
         >>>nltk.download()
