@@ -37,7 +37,7 @@
         >>>nltk.download()
        ```
 
-#### 4. git clone https://github.com/ish97/ESFWN-based-ESL-Annotator.git
+#### 4. git clone https://github.com/ish97/ESFWN-based-ESL-Annotator/script_esf.git
 
 
 ## How To Use
