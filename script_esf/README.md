@@ -45,3 +45,6 @@
 #### 2. **Usage**: python generate_event_structure_lexicon.py "your sentence"
 #### 3. **Check the output**: 'esl_annotation.result.json'
 
+cf. ewiser runs on cpu by default. If you want to use gpu, put your device choice into the cmd in the 'ewiserwrapper.py'. (cmd = ["python", "bin/annotate.py", "-c", "ewiser.semcor+wngt.pt", "-d", "cuda", input_file]
+    
+
