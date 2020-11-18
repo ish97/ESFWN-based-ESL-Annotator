@@ -14,10 +14,10 @@
    **hypernyms**: [move, displace]    
    **esf_type**: CAUSE_MOVE_TO_GOAL    
    **esf**: [{se_num: se1, time: t1, se_type: pre-state, se_form: be (theme, source_location)},    
-             {se_num: se2, time: t1, se_type: d-pre-state, se_form: be_not (theme, goal_location)},    
-             {se_num: se3, time: t2, se_type: process, se_form: V-ing (agent, source_location, goal_location)},    
-             {se_num: se4, time: t3, se_type: post-state, se_form: be (theme, goal_location)}]    
-             (**pre-state**: a presupposed state before the maintaining event, **post-state**: an entailed state after the maintaining event)
+              {se_num: se2, time: t1, se_type: d-pre-state, se_form: be_not (theme, goal_location)},    
+              {se_num: se3, time: t2, se_type: process, se_form: V-ing (agent, source_location, goal_location)},    
+              {se_num: se4, time: t3, se_type: post-state, se_form: be (theme, goal_location)}]    
+              (**pre-state**: a presupposed state before the maintaining event, **post-state**: an entailed state after the maintaining event)
 
 ## Pre-requisite and Installation
 
