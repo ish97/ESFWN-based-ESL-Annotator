@@ -18,6 +18,7 @@
 
 cuda 10.1 사용: CUDA=cu101,   
 cpu 사용: CUDA = cpu
+
 `conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch`
 `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html`
  3. [Spacy](https://spacy.io/usage) 설치
