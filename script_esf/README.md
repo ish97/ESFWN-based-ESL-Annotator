@@ -2,7 +2,7 @@
 **ESFWN-based ESL Annotator**는 **E**vent **S**tructure **F**rame-annotated **W**ord**N**et-based **E**vent **S**tructure **L**exicon **Annnotator**의 약자로 문장을 입력으로 받아서 문장 내의 동사에 대해 "사건구조프레임"과 "의미역" 등 단어 의미 정보를 출력하는 자동 주석기입니다.
 
 ## 주석기 아키텍쳐(Annotator Architecture)
-[]https://dm2304files.storage.live.com/y4pMCndCXLcqsxyoquUm24gfW7fenz8BNGKJPuD2TY8AbdwLVTRfCSGhABEH_JmcGHSHeo5yTY8ltBqRs3pmJzvBNMKFVXfji6B40DxAXGwI-A776kdMkj5aeRxJVAuwLfDzr_J3qXie2pb0NHE6SToauy6rcK6DpbT9RE7AP-5tmrIArW0rd2a14r1zZazkjyae-w1fYuI9Au_77a-JPw63ehNG23fWkjw77rRKsTwZBk/ESFWN-based_esf_annotation_architecture.png?psid=1&width=1172&height=620)
+![]https://dm2304files.storage.live.com/y4pMCndCXLcqsxyoquUm24gfW7fenz8BNGKJPuD2TY8AbdwLVTRfCSGhABEH_JmcGHSHeo5yTY8ltBqRs3pmJzvBNMKFVXfji6B40DxAXGwI-A776kdMkj5aeRxJVAuwLfDzr_J3qXie2pb0NHE6SToauy6rcK6DpbT9RE7AP-5tmrIArW0rd2a14r1zZazkjyae-w1fYuI9Au_77a-JPw63ehNG23fWkjw77rRKsTwZBk/ESFWN-based_esf_annotation_architecture.png?psid=1&width=1172&height=620)
 
 ## 주석기 구성요소 (Annotator Components)
 1. 단어 중의성 해소 및 의미 주석 알고리즘: EWISER & ewiser_wrapper
