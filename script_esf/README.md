@@ -2,45 +2,46 @@
 **ESFWN-based ESL Annotator**는 **E**vent **S**tructure **F**rame-annotated **W**ord**N**et-based **E**vent **S**tructure **L**exicon **Annnotator**의 약자로 문장을 입력으로 받아서 문장 내의 동사에 대해 "사건구조프레임"과 "의미역" 등 단어 의미 정보를 출력하는 자동 주석기입니다.
 
 ## 주석기 아키텍쳐(Annotator Architecture)
-![]https://dm2304files.storage.live.com/y4pMCndCXLcqsxyoquUm24gfW7fenz8BNGKJPuD2TY8AbdwLVTRfCSGhABEH_JmcGHSHeo5yTY8ltBqRs3pmJzvBNMKFVXfji6B40DxAXGwI-A776kdMkj5aeRxJVAuwLfDzr_J3qXie2pb0NHE6SToauy6rcK6DpbT9RE7AP-5tmrIArW0rd2a14r1zZazkjyae-w1fYuI9Au_77a-JPw63ehNG23fWkjw77rRKsTwZBk/ESFWN-based_esf_annotation_architecture.png?psid=1&width=1172&height=620)
+![](C:\Users\seohy\ESFWN-based-ESL-Annotator\ESFWN-based_esf_annotation_architecture)
 
 ## 주석기 구성요소 (Annotator Components)
-1. 단어 중의성 해소 및 의미 주석 알고리즘: EWISER & ewiser_wrapper
-2. 의미역 라벨링 도구: AllenNLP SRL
+1. 단어 중의성 해소 및 의미 주석 알고리즘 (EWISER & ewiser_wrapper)
+2. 의미역 라벨링 도구 (AllenNLP SRL)
 3. 사건구조프레임 주석 워드넷 (ESFWN)
 4. 사건구조프레임 목록 (ESF_list)
 5. 동사 불규칙 굴절 사전 (vInflection)
 
 ## 설치 (Installation)
- 1. [Anaconda3](https://www.anaconda.com/products/individual) 다운로드 및 설치 
-사이트에서 installer 다운로드 받아서 설치
- 2. [pytorch 1.5](https://pytorch.org/)와 [torch_sparse](https://github.com/rusty1s/pytorch_sparse) 설치
+ ####1. [Anaconda3](https://www.anaconda.com/products/individual) 다운로드 및 설치 
+    사이트에서 installer 다운로드 받아서 설치
 
-cuda 10.1 사용: CUDA=cu101,   
-cpu 사용: CUDA = cpu
+ ####2. [pytorch 1.5](https://pytorch.org/)와 [torch_sparse](https://github.com/rusty1s/pytorch_sparse) 설치
+    cuda 10.1 사용: CUDA=cu101,
+    cpu 사용: CUDA = cpu
+    `conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch`
+    `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html`
 
-`conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch`
-`pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html`
- 3. [Spacy](https://spacy.io/usage) 설치
+ ####3. [Spacy](https://spacy.io/usage) 설치
     `conda install -c conda-forge spacy`
- 4. [ewiser](https://github.com/SapienzaNLP/ewiser) 설치 
+
+ ####4. [ewiser](https://github.com/SapienzaNLP/ewiser) 설치 
     `git clone https://github.com/SapienzaNLP/eiwser.git`
     `cd ewiser`
     `pip install -r requirements.txt`
     `pip install -e .`
     
- 5. ewiser English checkpoints를 [여기](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view)에서 다운로드해서 ewiser 폴더에 넣으세요.
+ ####5. ewiser English checkpoints를 [여기](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view)에서 다운로드해서 ewiser 폴더에 넣으세요.
 
-5. [AllenNLP SRL](https://demo.allennlp.org/semantic-role-labeling) 설치
-`pip install allennlp==1.0.0 allennlp-models==1.0.0`
+ ####6. [AllenNLP SRL](https://demo.allennlp.org/semantic-role-labeling) 설치
+    `pip install allennlp==1.0.0 allennlp-models==1.0.0`
    
-6. ESL Annotator 패키지 설치
-git clone https://github.com/ihaeyong/drama-graph/script_esf.git
+ ####7. ESL Annotator 패키지 설치
+    `git clone https://github.com/ihaeyong/drama-graph/script_esf.git`
 
 ## 사용법
 
  - generate_event_structure_lexicon.py에서 'ewiser_path'와 'ewiser_input' 폴더 경로를 [your_path]로 수정하세요.
-- 출력을 얻기 위해 아래의 코드를 실행하세요.
+- 출력을 얻기 위해 아래의 코드를 실행하세요. <br>
 `python generate_event_structure_lexicon.py """your sentence"""`
 
 ## 입출력 예시
