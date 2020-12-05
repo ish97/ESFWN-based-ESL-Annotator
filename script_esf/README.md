@@ -15,7 +15,8 @@
  1. [Anaconda3](https://www.anaconda.com/products/individual) 다운로드 및 설치 
 사이트에서 installer 다운로드 받아서 설치
  2. [pytorch 1.5](https://pytorch.org/)와 [torch_sparse](https://github.com/rusty1s/pytorch_sparse) 설치
-cuda 10.1 사용: CUDA=cu101,   <br>cpu 사용: CUDA = cpu
+cuda 10.1 사용: CUDA=cu101,   
+cpu 사용: CUDA = cpu
 `conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch`
 `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html`
  3. [Spacy](https://spacy.io/usage) 설치
