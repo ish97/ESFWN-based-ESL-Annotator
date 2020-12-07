@@ -89,7 +89,8 @@
 문장에서 동사가 나타내는 사건 전후의 변화를 포착하기 위해 <전상태(pre-state), 진행(process), 후상태(post-state)>로 구조화한  의미구조. <br>
 아래 예시는 t1에 John이 도착점인 Seoul에 있지 않고, 출발점(source_location)에 있다가 arriving (t2)후 t3에 John은 Seoul에 있게 됨을 의미한다.<br>
 
-> 사건구조프레임 예시: **arrive**  (문장: "John arrived in Seoul yesterday.")<br>
+> 사건구조프레임 예시: <br>
+**arrive**  (문장: "John arrived in Seoul yesterday.")<br>
 > se1: pre-state: not_be (agent, at_goal_location, t1)<br>
 > se2: pre-state: be (agent, at_source_location, t1)<br>
 > se3: process: arriving (agent, at_goal_location, t2)<br>
