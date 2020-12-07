@@ -103,3 +103,7 @@
 
 > 입력 문장 "John arrived in Seoul yesterday."의 의미역<br>
 > {"ARG0": "John", "VERB": "arrived", "ARGM-LOC": "in_Seoul", "ARGM-TMP": "yesterday"}<br>
+
+6. **동의어와 상위어**
+> synonyms: ['arrive', 'get', 'come']<br>
+> hypernyms: []
