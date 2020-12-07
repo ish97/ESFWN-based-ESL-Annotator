@@ -63,7 +63,7 @@
 
 ## 사용법
 
-- generate_event_structure_lexicon.py에서 'ewiser_path'와 'ewiser_input' 폴더 경로를 [your_path]로 수정.<br>
+- script-esf/generate_event_structure_lexicon.py에서 'ewiser_path'와 'ewiser_input' 폴더 경로를 [your_path]로 수정.<br>
 - 실행 코드. <br>
   `python generate_event_structure_lexicon.py """your sentence"""`<br>
 
