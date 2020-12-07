@@ -10,8 +10,7 @@
 5. 동사 불규칙 굴절 사전 (vInflection)
 
 ## 설치 (Installation)
-1. 요구사항<br>
-   - [Anaconda3](https://www.anaconda.com/products/individual)<br> 
+1. [Anaconda3](https://www.anaconda.com/products/individual) 설치<br>
 
 2. ewiser conda environment를 생성하고, 활성화<br>
    `conda create -n ewiser python=3.7 pip; conda activate ewiser`<br>
