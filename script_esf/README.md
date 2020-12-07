@@ -77,7 +77,6 @@
 >v.lemma: arrive <br>
 
 2. **동사 의미**(WSD by ewiser)<br>
-> **arrive**<br>
 > wn_synset: arrive.v.01<br>
 > v.offset: wn:02005948v<br>
 > v.sense_key: arrive%2:38:00:: <br>
@@ -89,8 +88,7 @@
 문장에서 동사가 나타내는 사건 전후의 변화를 포착하기 위해 <전상태(pre-state), 진행(process), 후상태(post-state)>로 구조화한  의미구조. <br>
 아래 예시는 t1에 John이 도착점인 Seoul에 있지 않고, 출발점(source_location)에 있다가 arriving (t2)후 t3에 John은 Seoul에 있게 됨을 의미한다.<br>
 
-> 사건구조프레임 예시: <br>
-**arrive**  (문장: "John arrived in Seoul yesterday.")<br>
+> 사건구조프레임: <br>
 > se1: pre-state: not_be (agent, at_goal_location, t1)<br>
 > se2: pre-state: be (agent, at_source_location, t1)<br>
 > se3: process: arriving (agent, at_goal_location, t2)<br>
@@ -101,7 +99,6 @@
 의미역은 문장에 표현된 사건의 참여자와 시간, 장소, 원인, 목적, 방법 등. <br>
 다음은 AllenNLP SRL에 의해 주석된 의미역 예. ARG0은 참여자, ARGM-LOC은 장소, ARGM-TMP는 시간.<br>
 
-> 입력 문장 "John arrived in Seoul yesterday."의 의미역<br>
 > {"ARG0": "John", "VERB": "arrived", "ARGM-LOC": "in_Seoul", "ARGM-TMP": "yesterday"}<br>
 
 6. **동의어와 상위어**
