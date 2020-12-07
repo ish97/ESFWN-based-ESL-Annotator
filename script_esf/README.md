@@ -96,8 +96,9 @@
 > se4: post-state: be (agent, at_goal_location, t3)<br>
 > se5: pos-state: not_be (agent, at_source_location, t3)<br>
 
-5. **의미역**(Semantic Role)
-의미역은 문장에 표현된 사건의 참여자와 시간, 장소, 원인, 목적, 방법 등. 다음은 AllenNLP SRL에 의해 주석된 의미역 예. ARG0은 참여자, ARGM-LOC은 장소, ARGM-TMP는 시간.<br>
+5. **의미역**(Semantic Role) <br>
+의미역은 문장에 표현된 사건의 참여자와 시간, 장소, 원인, 목적, 방법 등. <br>
+다음은 AllenNLP SRL에 의해 주석된 의미역 예. ARG0은 참여자, ARGM-LOC은 장소, ARGM-TMP는 시간.<br>
 
 > 입력 문장: "John arrived in Seoul yesterday."의 의미역<br>
 > {"ARG0": "John", "VERB": "arrived", "ARGM-LOC": "in_Seoul", "ARGM-TMP": "yesterday"}<br>
