@@ -1,5 +1,5 @@
 # ESFWN-based ESL Annotator 
-**ESFWN-based ESL Annotator**는 **E**vent **S**tructure **F**rame-annotated **W**ord**N**et-based **E**vent **S**tructure **L**exicon **Annnotator**의 약자로 문장을 입력으로 받아서 문장 내의 동사에 대해 "사건구조프레임"과 "의미역" 등 단어 의미 정보를 출력하는 자동 주석기입니다. <br>
+**ESFWN-based ESL Annotator**는 **E**vent **S**tructure **F**rame-annotated **W**ord**N**et-based **E**vent **S**tructure **L**exicon **Annnotator**의 약자로 문장을 입력으로 받아서 문장 내의 동사와 그 논항에 대해 "사건구조프레임"과 "의미역" 등 단어 의미 정보를 출력하는 자동 주석기입니다. <br>
 **ESFWN**: 영어 워드넷의 모든 동사에 대해 각 신셋마다 사건구조프레임 유형을 주석해 놓은 ESF-annotated WordNet
 
 ## 주석기 구성요소 (Annotator Components)
