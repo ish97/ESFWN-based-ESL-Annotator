@@ -18,7 +18,7 @@
 3. [pytorch-1.5.0](https://pytorch.org/get-started/locally/) 설치<br>
 
 4. [torch_scatter, torch_sparse](https://github.com/rusty1s/pytorch_sparse) 설치<br>
-   `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html'<br>
+   `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html`<br>
    - ${CUDA}는 cpu, cu92, cu101, cu110 등 파이토치 설치 버전에 따라 선택.<br>
    - cpu만 사용하는 경우 torch_sparse 설치는 아래의 코드 실행
      `pip install torch-sparse==0.6.7 -f https://pytorch-geometric.com/whl/torch-1.5.0+cpu.html`
