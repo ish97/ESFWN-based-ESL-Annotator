@@ -81,6 +81,7 @@
 > wn_synset: arrive.v.01<br>
 > v.offset: wn:02005948v<br>
 > v.sense_key: arrive%2:38:00:: <br>
+이를 통해 워드넷과 연결 가능 <br>
 
 3. **사건구조프레임 타입**(Event Structure Frame Type)
 > MOVE_TO_GOAL <br>
