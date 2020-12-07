@@ -1,80 +1,103 @@
 # ESFWN-based ESL Annotator 
-**ESFWN-based ESL Annotator**는 **E**vent **S**tructure **F**rame-annotated **W**ord**N**et-based **E**vent **S**tructure **L**exicon **Annnotator**의 약자로 문장을 입력으로 받아서 문장 내의 동사에 대해 "사건구조프레임"과 "의미역" 등 단어 의미 정보를 출력하는 자동 주석기입니다.
-
-## 주석기 아키텍쳐(Annotator Architecture)
-![](C:\Users\seohy\ESFWN-based-ESL-Annotator\ESFWN-based_esf_annotation_architecture)
+**ESFWN-based ESL Annotator**는 **E**vent **S**tructure **F**rame-annotated **W**ord**N**et-based **E**vent **S**tructure **L**exicon **Annnotator**의 약자로 문장을 입력으로 받아서 문장 내의 동사에 대해 "사건구조프레임"과 "의미역" 등 단어 의미 정보를 출력하는 자동 주석기입니다. <br>
+**ESFWN**: 영어 워드넷의 모든 동사에 대해 각 신셋마다 사건구조프레임 유형을 주석해 놓은 ESF-annotated WordNet
 
 ## 주석기 구성요소 (Annotator Components)
-1. 단어 중의성 해소 및 의미 주석 알고리즘 (EWISER & ewiser_wrapper)
+1. 단어 중의성 해소 및 의미 주석 알고리즘 (ewiser & ewiser_wrapper)
 2. 의미역 라벨링 도구 (AllenNLP SRL)
 3. 사건구조프레임 주석 워드넷 (ESFWN)
 4. 사건구조프레임 목록 (ESF_list)
 5. 동사 불규칙 굴절 사전 (vInflection)
 
 ## 설치 (Installation)
-1. [Anaconda3](https://www.anaconda.com/products/individual) 다운로드 및 설치<br> 
-    사이트에서 installer 다운로드 받아서 설치<br>
+1. 요구사항<br>
+   - [Anaconda3](https://www.anaconda.com/products/individual)<br> 
 
-2. [pytorch 1.5](https://pytorch.org/)와 [torch_sparse](https://github.com/rusty1s/pytorch_sparse) 설치<br>
-    cuda 10.1 사용: CUDA=cu101,<br>
-    cpu 사용: CUDA = cpu<br>
-    `conda install pytorch=1.5.1 torchvision cudatoolkit=10.1 -c pytorch`<br>
-    `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html`<br>
+2. ewiser conda environment를 생성하고, 활성화<br>
+   `conda create -n ewiser python=3.7 pip; conda activate ewiser`<br>
 
-3. [Spacy](https://spacy.io/usage) 설치<br>
-    `conda install -c conda-forge spacy`<br>
+3. [pytorch-1.5.0](https://pytorch.org/get-started/locally/) 설치<br>
 
-4. [ewiser](https://github.com/SapienzaNLP/ewiser) 설치 <br>
-    `git clone https://github.com/SapienzaNLP/eiwser.git`<br>
+4. [torch_scatter, torch_sparse](https://github.com/rusty1s/pytorch_sparse) 설치<br>
+   `pip install torch-scatter torch-sparse -f https://pytorch-geometric.com/whl/torch-1.5.0+${CUDA}.html'<br>
+   - ${CUDA}는 cpu, cu92, cu101, cu110 등 파이토치 설치 버전에 따라 선택.<br>
+   - cpu만 사용하는 경우 torch_sparse 설치는 아래의 코드 실행
+     `pip install torch-sparse==0.6.7 -f https://pytorch-geometric.com/whl/torch-1.5.0+cpu.html`
+
+5. [ewiser](https://github.com/SapienzaNLP/ewiser) 설치 <br>
+    `git clone https://github.com/SapienzaNLP/ewiser.git`<br>
     `cd ewiser`<br>
     `pip install -r requirements.txt`<br>
     `pip install -e .`<br>
-    
-5. ewiser English checkpoints를 [여기](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view)에서 다운로드해서 ewiser 폴더에 넣으세요.<br>
 
-6. [AllenNLP SRL](https://demo.allennlp.org/semantic-role-labeling) 설치<br>
+    - 만약 requirements의 각 툴이 설치가 안되면 각각 pip을 이용해 설치하면 됨.<br>
+    - [fairseq](https://github.com/pytorch/fairseq)는 아래 코드로 설치.<br>
+       `pip install fairseq==0.10.0'<br>
+    - nltk 데이터 다운로드<br>
+       `python`<br>
+       `>>>import nltk`<br>
+       `>>>nltk.download()`<br>
+       화면에 오픈되는 테이블에서 Collections 탭에서 all 선택한 후 Download 버튼 클릭<br>
+
+6. [spacy](https://spacy.io/) 설치<br>
+   `pip install spacy'<br>
+   `python -m spacy download en_core_web_sm`
+
+7. ewiser English checkpoints를 [여기](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view)에서 다운로드해서 ewiser 폴더에 넣기.<br>
+
+8. ewiser/bin/annotate.py 59번째줄 nlp = load(args.language.lower(), disable=['ner', 'parser'])에서 args.language.lower()대신 'en_core_web_sm' 삽입
+
+9. ewiser 관련 툴 설치 확인<br>
+   `python`<br>
+   `import torch, torch_scatter, torch_sparse, numpy, nltk, h5py, joblib, fairseq, pytorch_pretrained_bert, nltk, spacy`<br>
+
+10. [AllenNLP SRL](https://demo.allennlp.org/semantic-role-labeling) 설치<br>
     `pip install allennlp==1.0.0 allennlp-models==1.0.0`<br>
+
+11. [Jsonnet](https://jsonnet.org/) 설치<br>
+     `pip install jsonnet`<br>
+     For Windows, `pip install jsonnetbin`<br>
    
-7. ESL Annotator 패키지 설치<br>
+12. ESL Annotator 패키지 설치<br>
     `git clone https://github.com/ihaeyong/drama-graph/script_esf.git`<br>
 
 ## 사용법
 
- - generate_event_structure_lexicon.py에서 'ewiser_path'와 'ewiser_input' 폴더 경로를 [your_path]로 수정하세요.<br>
-- 출력을 얻기 위해 아래의 코드를 실행하세요. <br>
-`python generate_event_structure_lexicon.py """your sentence"""`<br>
+- generate_event_structure_lexicon.py에서 'ewiser_path'와 'ewiser_input' 폴더 경로를 [your_path]로 수정.<br>
+- 실행 코드. <br>
+  `python generate_event_structure_lexicon.py """your sentence"""`<br>
 
-## 입출력 예시
+## 입출력 예시 설명
 
 > 입력: John arrived in Seoul yesterday.
 > 출력: esl_annotation.result.json
 
-## 용어 정리 (terminology)
+1. **동사 텍스트 토큰과 레마**<br>
+>v.text: arrived
+>v.lemma: arrive
 
- 1. **단어 중의성 해소**(Word Sense Disambiguation; WSD)<br>
-텍스트에 출현하는 단어의 의미를 결정해서 여러가지 뜻으로 쓰일 수 있는 가능성을 제거해 주는 NLP 태스크. <br>
+2. **동사 의미**(WSD by ewiser)<br>
+> **arrive**<br>
+> wn_synset: arrive.v.01<br>
+> v.offset: wn:02005948v<br>
+> v.sense_key: arrive%2:38:00::
 
-> 단어 중의성 해소 예시: **arrive**  (문장: "John arrived in Seoul yesterday.")<br>
-> sense_number: arrive.v.01<br>
-> offset: wn:02005948v<br>
+3. **사건구조프레임 타입**(Event Structure Frame Type)
+> MOVE_TO_GOAL
 
-2. **사건구조프레임**(Event Structure Frame; ESF)
+4. **사건구조프레임**(Event Structure Frame; ESF)
 문장에서 동사가 나타내는 사건 전후의 변화를 포착하기 위해 <전상태(pre-state), 진행(process), 후상태(post-state)>로 구조화한  의미구조. <br>
 아래 예시는 t1에 John이 도착점인 Seoul에 있지 않고, 출발점(source_location)에 있다가 arriving (t2)후 t3에 John은 Seoul에 있게 됨을 의미한다.<br>
 
 > 사건구조프레임 예시: **arrive**  (문장: "John arrived in Seoul yesterday.")<br>
-> se1: pre-state: not_be (John, in_Seoul, t1)<br>
-> se2: pre-state: be (John, at_source_location, t1)<br>
-> se3: process: putting (John, the_book, on_the_table, t2)<br>
-> se4: post-state: be (the_book, on_the_table, t3)<br>
-> se5: pos-state: not_be (the_book, at_source_location, t3)<br>
+> se1: pre-state: not_be (agent, at_goal_location, t1)<br>
+> se2: pre-state: be (agent, at_source_location, t1)<br>
+> se3: process: arriving (agent, at_goal_location, t2)<br>
+> se4: post-state: be (agent, at_goal_location, t3)<br>
+> se5: pos-state: not_be (agent, at_source_location, t3)<br>
 
- 3. **ESFWN** (Event Structure Frame-annotated WordNet)
-ESFWN은 영어 워드넷의 모든 동사 신셋 24601개에 대해 사건구조프레임을 주석해 놓은 사전입니다. 아래는 ESFWN 항목중 *arrive.v.01* 의미의 예.<br>
-> {"VERB": "arrive", "SENSE_NUMBER": "arrive.v.01", "SENSE_KEY": "arrive%2:38:00::", "OFFSET": "wn:02005948v", "ESF_TYPE": "MOVE_TO_GOAL", "SYNONYMS": ["arrive", "get", "come"], "HYPERNYMS": [], "VID": 861}<br>
-
- 4. **의미역**(Semantic Role)
+5. **의미역**(Semantic Role)
 의미역은 문장에 표현된 사건의 참여자와 시간, 장소, 원인, 목적, 방법 등. 다음은 AllenNLP SRL에 의해 주석된 의미역 예. ARG0은 참여자, ARGM-LOC은 장소, ARGM-TMP는 시간.<br>
 
-> 의미역 주석 예 (문장: "John arrived in Seoul yesterday.")
+> 입력 문장: "John arrived in Seoul yesterday."의 의미역<br>
 > {"ARG0": "John", "VERB": "arrived", "ARGM-LOC": "in_Seoul", "ARGM-TMP": "yesterday"}<br>
