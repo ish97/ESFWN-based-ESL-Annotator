@@ -58,7 +58,8 @@
      For Windows, `pip install jsonnetbin`<br>
    
 12. ESL Annotator 패키지 설치<br>
-    `git clone https://github.com/ihaeyong/drama-graph/script_esf.git`<br>
+    `git clone https://github.com/ihaeyong/drama-graph.git`<br>
+    - script-esf 폴더<br>
 
 ## 사용법
 
