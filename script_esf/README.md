@@ -68,8 +68,8 @@
 
 ## 입출력 예시 설명
 
-> 입력: John arrived in Seoul yesterday.
-> 출력: esl_annotation.result.json
+> 입력: John arrived in Seoul yesterday.<br>
+> 출력: esl_annotation.result.json<br>
 
 1. **동사 텍스트 토큰과 레마**<br>
 >v.text: arrived
