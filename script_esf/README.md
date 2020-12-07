@@ -31,7 +31,7 @@
 
     - 만약 requirements의 각 툴이 설치가 안되면 각각 pip을 이용해 설치하면 됨.<br>
     - [fairseq](https://github.com/pytorch/fairseq)는 아래 코드로 설치.<br>
-       `pip install fairseq==0.10.0'<br>
+       `pip install fairseq==0.10.0`<br>
     - nltk 데이터 다운로드<br>
        `python`<br>
        `>>>import nltk`<br>
