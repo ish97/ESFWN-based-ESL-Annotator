@@ -73,17 +73,17 @@
 > 출력: esl_annotation.result.json<br>
 
 1. **동사 텍스트 토큰과 레마**<br>
->v.text: arrived
->v.lemma: arrive
+>v.text: arrived <br>
+>v.lemma: arrive <br>
 
 2. **동사 의미**(WSD by ewiser)<br>
 > **arrive**<br>
 > wn_synset: arrive.v.01<br>
 > v.offset: wn:02005948v<br>
-> v.sense_key: arrive%2:38:00::
+> v.sense_key: arrive%2:38:00:: <br>
 
 3. **사건구조프레임 타입**(Event Structure Frame Type)
-> MOVE_TO_GOAL
+> MOVE_TO_GOAL <br>
 
 4. **사건구조프레임**(Event Structure Frame; ESF)
 문장에서 동사가 나타내는 사건 전후의 변화를 포착하기 위해 <전상태(pre-state), 진행(process), 후상태(post-state)>로 구조화한  의미구조. <br>
