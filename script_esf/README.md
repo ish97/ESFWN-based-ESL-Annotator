@@ -32,15 +32,15 @@
     - 만약 requirements의 각 툴이 설치가 안되면 각각 pip을 이용해 설치하면 됨.<br>
     - [fairseq](https://github.com/pytorch/fairseq)는 아래 코드로 설치.<br>
        `pip install fairseq==0.10.0`<br>
-    - nltk 데이터 다운로드<br>
+    - [nltk](https://nltk.org) 데이터 다운로드<br>
        `python`<br>
        `>>>import nltk`<br>
        `>>>nltk.download()`<br>
        화면에 오픈되는 테이블에서 Collections 탭에서 all 선택한 후 Download 버튼 클릭<br>
 
 6. [spacy](https://spacy.io/) 설치<br>
-   `pip install spacy'<br>
-   `python -m spacy download en_core_web_sm`
+   `pip install spacy`<br>
+   `python -m spacy download en_core_web_sm`<br>
 
 7. ewiser English checkpoints를 [여기](https://drive.google.com/file/d/11RyHBu4PwS3U2wOk-Le9Ziu8R3Hc0NXV/view)에서 다운로드해서 ewiser 폴더에 넣기.<br>
 
