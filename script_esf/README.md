@@ -104,3 +104,6 @@
 6. **동의어와 상위어**
 > synonyms: ['arrive', 'get', 'come']<br>
 > hypernyms: []
+
+## ESFWN-v1 Paper
+Seohyun Im. 2019. Semi-Automatic Annotation of Event Structure, Argument Structure, and Opposition Structure to WordNet by Using Event Structure Frame. <em>Proceedings of the 10th Global WordNet Conference</em>, 2019. 07. 23-27, Poland.
