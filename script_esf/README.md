@@ -106,4 +106,4 @@
 > hypernyms: []
 
 ## ESFWN-v1 Paper
-]Seohyun Im. 2019. Semi-Automatic Annotation of Event Structure, Argument Structure, and Opposition Structure to WordNet by Using Event Structure Frame. <em>Proceedings of the 10th Global WordNet Conference</em>, 2019. 07. 23-27, Poland.](https://github.com/ish97/ESFWN-based-ESL-Annotator/blob/main/script_esf/README.md#:~:text=Semi%2DAutomatic%20Annotation%20of%20Event%20Structure%2C%20Argument%20Structure%2C%20and%20Opposition%20Structure%20to%20WordNet%20by%20Using%20Event%20Structure%20Frame)
+[Seohyun Im. 2019. Semi-Automatic Annotation of Event Structure, Argument Structure, and Opposition Structure to WordNet by Using Event Structure Frame. <em>Proceedings of the 10th Global WordNet Conference</em>, 2019. 07. 23-27, Poland.](https://github.com/ish97/ESFWN-based-ESL-Annotator/blob/main/script_esf/README.md#:~:text=Semi%2DAutomatic%20Annotation%20of%20Event%20Structure%2C%20Argument%20Structure%2C%20and%20Opposition%20Structure%20to%20WordNet%20by%20Using%20Event%20Structure%20Frame)
